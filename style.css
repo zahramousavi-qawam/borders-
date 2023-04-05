@@ -1,0 +1,202 @@
+body{
+    background-color: #f3e8ff;
+    color: #581c87;
+}
+.borders {
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.borders>h2 {
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+}
+@keyframes lights {
+  0% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+  30% { 
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  40% { 
+    color: hsl(230, 100%, 95%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+}
+
+h2 {
+  color: hsl(230, 40%, 80%);
+  margin: auto;
+  font-size: 2.5rem;
+  font-weight: 300;
+  animation: lights 5s 750ms linear infinite;
+}
+
+.b-none,.b-solid ,.b-dashed ,.b-double  ,.b-dotted  ,.b-ridge  ,.b-outset ,.b-inset  ,.b-groove ,.b-mixed{
+    padding: 5%;
+    margin: .5%;
+    width: 20%;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bolder;
+}
+.b-none {
+    border: none;
+}
+.b-solid {
+    border: 5px solid #fca5a5;
+}
+.b-dashed{
+    border: 5px dashed #fdba74;
+}
+.b-double {
+    border: 5px double #fcd34d;
+}
+.b-dotted {
+    border: 5px dotted #bef264;
+}
+.b-ridge {
+    border: 5px ridge #86efac;
+}
+.b-outset {
+    border: 5px outset #f0abfc;
+}
+.b-inset {
+    border: 5px inset #f9a8d4;
+}
+
+.b-groove {
+    border: 5px groove #fda4af;
+}
+.b-mixed{
+  width: 100%;
+  border-bottom: 5px ridge #86efac ;
+  border-top: 5px dashed #fdba74 ;
+  border-left: 5px dotted #bef264;
+  border-right: 5px double #fcd34d;
+}
+
+.waviy {
+  position: relative;
+  margin: auto;
+}
+.waviy span {
+  
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+
+p {
+    color:#581c87 ;
+    text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
+    font-size: 32px;
+    font-weight: bolder;
+}
+  .container {
+    color: #e5e5e5;
+    text-transform: lowercase;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container>p{
+    text-transform: uppercase;
+  }
+  .animation {
+    height: 52%;
+    width: 54%;
+    font-size: 26px;
+    overflow: hidden;
+  }
+  
+  .animation > div > div {
+    padding: 0.25rem 0.75rem;
+    width: 58%;
+    margin-bottom: 13%;
+    display:inline-block;
+    color: #312e81;
+  }
+  .animation div:first-child {
+    animation: text-animation 8s infinite;
+  }
+ .first,.second,.third{
+    width: 72%;
+    height: auto;
+    margin: 4% auto;
+}
+
+  .first div {
+    border:3px solid #fca5a5;
+  }
+  .second div {
+    border:3px dashed#fdba74;
+  }
+  .third div{
+    border:3px  double#fcd34d;
+  }
+  
+  @keyframes text-animation {
+    0% {margin-top: 0;}
+    10% {margin-top: 0;}
+    20% {margin-top: -5.62rem;}
+    30% {margin-top: -5.62rem;}
+    40% {margin-top: -11.24rem;}
+    60% {margin-top: -11.24rem;}
+    70% {margin-top: -5.62rem;}
+    80% {margin-top: -5.62rem;}
+    90% {margin-top: 0;}
+    100% {margin-top: 0;}
+  }
+  
+  
